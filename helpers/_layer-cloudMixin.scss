@@ -1,0 +1,11 @@
+@import '../components/_header-cloud';
+
+@mixin layer-cloud {
+    @include header-cloud;
+    background: url('../images/Group\ 1.png') center no-repeat;
+    background-size: cover;
+    z-index: 99;
+    @media #{$maxSmall} {
+        width: 100%;
+}
+}

@@ -1,0 +1,12 @@
+@mixin header-cloud-rtl {
+    position: absolute;
+    top: -165px;
+    right: 0;
+    z-index: 9;
+    height: 285px;
+    width: 100%;
+    transform: rotateY(180deg);
+
+}
+
+

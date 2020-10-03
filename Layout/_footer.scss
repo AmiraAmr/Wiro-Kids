@@ -1,0 +1,46 @@
+footer{
+    background: url('../images/aaw.png') center no-repeat;
+    background-size: cover;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    position: relative;
+    .background-layer{
+        @include backgroundLayer(rgba(0, 0, 0, 0.4));
+    }
+    img.logo{
+        height: 65px;
+        width: 95px;
+    }
+    ul{
+        list-style: none;
+        width: 900px;
+        margin: 20px auto;
+        li {
+            display: inline-block;
+            padding: 10px;
+            text-transform: uppercase;
+            font-size: 13px;
+            a {
+            color : #FFF;
+            &:hover {
+                text-decoration: none;
+                color: #DDD;
+            }
+            }
+        }
+    }
+
+    .media{
+        margin-top: 0;
+        i{
+            font-size: 25px;
+            color: #FFF;
+            margin: 0 12px;
+            cursor: pointer;
+            &:hover{
+                color: #DDD;
+            }
+        }
+    }
+}

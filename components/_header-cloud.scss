@@ -1,0 +1,15 @@
+@mixin header-cloud {
+        position: absolute;
+        top: -165px;
+        right: 0;
+        z-index: 9;
+        width: 120%;
+        height: 285px;
+        @media #{$maxSmall} {
+                width: auto;
+        }
+
+}
+
+
+    

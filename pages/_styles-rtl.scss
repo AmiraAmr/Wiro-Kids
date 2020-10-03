@@ -1,0 +1,829 @@
+
+
+body{
+    font-family: $main-font;
+}
+
+.row{
+    >div {float: right !important;}
+}
+// ----------------------------- COMPONENTS ----------------------------- //
+// --------------------- NAVBAR --------------------- //
+
+img.cloud-1{
+    right: 0;
+    left: auto;
+}
+.navbar-toggler{
+    left: 30px;
+    right: auto;
+}
+nav.navbar {
+    .ellipse{
+        right: 13%;
+        left: auto;
+        top: -7px;
+    }   
+    ul {
+       padding-right: 0;
+       &:first-of-type{right: 30px;left: auto}
+       &:last-of-type{left: 30px; right: auto}
+       li{
+           text-align: right;
+           text-transform: capitalize;
+           float: right;
+           font-size: 19px;
+           &.login{
+               i{
+                   margin-left: 5px;
+                   margin-right: 6px;
+                }
+           }
+       }
+    }
+    a.logo{
+        margin-right: 45%;
+    }
+
+    @media #{$maxMedium} {
+        left: 0px;
+        right: auto;
+        top: 90px;
+        ul {
+            padding-right: 0;
+            &:first-of-type{float: none;margin-right: 0;}
+            &:last-of-type{float: none;margin-left: 0;}
+            li {
+                font-size: 29px;
+                text-align: center;
+                &.login {
+                    margin-right: 120px;
+                }
+            }
+        }
+    }
+}
+@media #{$maxMedium} {
+    a.logo {
+        left: 41%;
+        margin-left: 0;
+    }
+}
+// --------------------- MAIN-BUTTON --------------------- //
+button.btn{font-size: 18px;}
+
+
+
+// ----------------------------- HELPERS ----------------------------- //
+// --------------------- HEADER LAYER --------------------- //
+header.header {
+    .layer{
+        padding-left: 0;
+        padding-right: 70px;
+        h2,
+        .heading h2 {
+            text-align: right;
+            font-size: 50px;
+        }
+    }
+}
+
+
+// ----------------------------- LAYOUT ----------------------------- //
+// --------------------- FOOTER --------------------- //
+footer{
+    ul li {font-size: 18px;}
+}
+
+
+
+
+
+// --------------------- HOME --------------------- //
+
+header.home-header{
+    .layer{
+        h2,
+        .heading h2{
+            font-size: 32px;
+        }
+    }
+    .light{
+        right: auto;
+        left: 136px;
+        @media #{$maxMedium}{
+            left: 15px;
+            right: auto;
+            width: 255px;
+        }
+    }
+}
+.about-us{
+    img.cloud{@include header-cloud-rtl;}
+    .layer-cloud{@include layer-cloud-rtl;}
+    img.people{
+        right: 210px;
+        @media #{$maxSmall} {
+            right: 120px;
+        }
+    }
+    h4{font-size: 35px;}
+}
+
+.our-services{
+    margin-top: 100px;
+    h4{font-size: 35px;}
+    .row{
+        >div{
+            ul.services-list{
+                img{
+                    right: auto;
+                    top: -350px;
+                    transform: rotateY(180deg);
+                }
+            }
+        }
+        @media #{$maxMedium} {
+            div.col-md-12{
+                &:last-child {
+                    width: 100%;
+                    ul.services-list{
+                        img{
+                            top:-280px
+                        }
+                    }
+                }
+            }       
+        }
+    }
+}
+
+.testimonials{
+    .blue-cloud{
+        @include header-cloud-rtl;
+        top: -145px;   
+        height: 180px;
+    }
+    img.characters{
+            right: 10%;
+        }
+    h4{
+        margin-right: 140px;
+        font-size: 35px;
+    }
+    .testimonials-content{
+        margin-right: 17%;
+        margin-left: 0;
+        .female{
+            border-top-right-radius: 30px;
+            border-top-left-radius: 170px;
+        }
+        .review{
+            right: 44%;
+            border-bottom-right-radius: 30px;
+            border-bottom-left-radius: 170px;
+            height: 380px;
+            .rev{
+                h4{
+                    font-size: 28px;
+                    margin-right: 0;
+                }
+                h5{font-size: 23px;}
+                p{font-size: 21px;}
+                a{
+                    span {
+                        i {
+                            transform: rotateY(180deg);
+                        }
+                    }
+                }
+            }
+            .robot{
+                right: auto;
+                left: -196px;
+                transform: rotateY(180deg);
+            }
+            @media #{$maxMedium}{
+                height: 335px;
+            }
+        }
+    }
+    
+
+    @media #{$maxMedium} {
+        padding-bottom: 100px;
+        margin-top: 180px;
+
+        h4{margin-bottom: 20px;}
+        .testimonials-content{
+            margin-left: 3%;
+            margin-right: 3%;
+            .female{
+                display: block;
+                width: 68%;
+                height: 350px;
+                border-radius: 10px;
+                border-top-right-radius: 10px;
+                position: static;
+            }
+            .review {
+                display: block;
+                width: 40%;
+                height: 320px;
+                bottom: -125px;
+                padding: 20px;
+                border-radius: 10px;
+            }
+            .robot{
+                height: 240px;
+                width: 200px;
+                bottom: 40px;
+                right: 33px;
+            }
+
+        }
+    }
+    
+}
+
+.add-opinion {
+    h4{font-size: 35px;}
+    p{font-size: 20px;}
+    @media #{$maxSmall}{
+        img{margin-bottom: 40px;}
+    }
+}
+
+
+
+// --------------------- ABOUT US --------------------- //
+.cv{
+    background: url('../images/cv.png') center no-repeat;
+    background-size: 100% 100%;
+    img.cloud{
+        @include header-cloud-rtl;
+        top: -275px;
+        height: 320px;
+    }
+    .layer-cloud{
+        @include layer-cloud-rtl;
+        top: -275px;
+        height: 320px;
+    }
+    img.boy{
+        right: 170px;
+        left: auto;
+        transform: rotateY(180deg);
+    }
+    .row{
+        h4{font-size: 35px;}
+        h5{font-size: 25px;}
+        p{font-size: 20px;}
+    }  
+    @media #{$maxSmall} {
+        background: url('../images/45999-rtl.png') center no-repeat; 
+        background-size: cover;
+    } 
+}
+.our-media {
+    h4{font-size: 35px;}
+    p{font-size: 22px;}
+    .buttons{
+        button.btn{
+            border-top-left-radius: 35px;
+            border-top-right-radius: 10px;
+            &:not(.active){
+                border-top-right-radius: 35px;
+            }
+        }
+    }
+}
+
+
+// --------------------- SERVICES --------------------- //
+
+.services{
+    img.cloud{@include header-cloud-rtl;}
+    .layer-cloud{@include layer-cloud-rtl;}
+    .row>div{
+        a{
+            h4{font-size: 23px;}
+            p{font-size: 20px;}
+        }
+        .burst i {
+            font-size: 35px;
+            top: 15px;
+            right: 15px;
+        }
+    }
+}
+
+
+// --------------------- SERVICES-DETAILS --------------------- //
+
+.details{
+    img.cloud{@include header-cloud-rtl;}
+    .layer-cloud{@include layer-cloud-rtl;}
+    h4{
+        font-size: 23px;
+        &.head{padding-right: 20px; font-size: 27px;}
+    }
+    .content-details,
+    .more-details
+    {
+        p{font-size: 19px;}
+    }
+    .content {
+        h4{font-size: 27px}
+        .burst i {
+            font-size: 35px;
+            top: 14px;
+            right: 16px;
+        }
+    }
+    @media #{$maxMedium}{
+        .row >div:last-child{float: none !important;}
+        .content{zoom:1 !important;}
+        .content-details{margin-top: 30px;}
+    }
+    
+}
+
+
+// --------------------- COURSES --------------------- //
+
+header.header.courses-header{
+    form{
+        input{
+            width: 550px;
+            font-size: 27px;
+            margin-right: 0;
+            margin-left: 20px;
+        }
+        button.btn{font-size: 28px;}
+    }
+}
+
+.courses{
+    img.cloud{@include header-cloud-rtl;}
+    .layer-cloud{@include layer-cloud-rtl;}
+
+    .row.main-row{
+        >div:nth-child(2) {padding: 0 30px 0 0;}
+        .data{padding: 0 20px;}
+        @media #{$maxMedium} {
+            &:nth-child(1){padding-left: 0px;width: 100%}
+            img{margin-top: 50px; margin-bottom: 0; width: 100%;}
+        }
+    }
+    h4{font-size: 25px;}
+    p{font-size: 20px;}
+
+    .row.detail-row{
+        .col-xs-5{
+            padding-right: 25px;
+            padding-top: 10px;
+            .burst i{
+                font-size: 30px;
+                top: 14px;
+                right: 17px;
+                left: auto;
+            }
+        }
+        h5{font-size: 26px;}
+    }
+    .buttons{
+        .date,
+        button
+        {
+            right: auto;
+            left: 0;
+        }
+
+        button{
+            font-size: 28px;
+            z-index: 9999;
+            a{
+                i{
+                    transform: rotateY(180deg);
+                    &:hover{
+                        margin-left: 0;
+                        margin-right: 25px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+// --------------------- COURSES DETAILS --------------------- //
+
+header.header.blog-details-header{
+    height: 840px;
+    @media #{$maxMedium} {height: 930px;}
+
+    .layer{
+        .heading{
+            text-align: right;
+            h5{
+                margin-left:10px;
+                i{font-size: 18px;margin-left:5px}
+            }
+            p{text-align: right;}
+            button.btn{
+                font-size: 18px;
+                i{
+                    margin: 0 8px;
+                    font-size: 20px;
+                }
+            }
+        }
+
+    }
+    
+}
+
+
+.head-topic{
+    i{margin-right:5px;}
+    h4{display: inline-block;}
+}
+
+.course-description{
+    img.cloud{@include header-cloud-rtl;}
+    .layer-cloud{@include layer-cloud-rtl;}
+    .sidebar{
+        top: -770px;
+        right: auto;
+        left: 0;
+        .details{
+            padding-right: 40px;
+            h5{
+                span{
+                    font-weight: normal;
+                    margin-right: 10px;
+                    text-decoration: line-through;
+                }
+            }
+            button.btn{
+                width: 70%;
+                margin: 0 15% 50px;
+            }
+            h6{
+                font-size: 20px;
+                i{margin-left: 7px;}
+            }
+        }
+    
+    }
+    
+    .descriptions>div{
+        p{
+            margin-bottom: 14px;
+            font-size: 19px;
+            i{
+                color: #AAA;
+                margin-right: 0px;
+                margin-left: 8px;
+            }
+        }
+        h3{font-size: 32px;}
+        h5{font-size: 20px;}
+        .vector-image{
+            width: 320px;
+            height: 130px;
+            bottom: 20px;
+            right: auto;
+            left: 10px;
+            >img.vector{
+                transform: rotateY(180deg);
+            }
+        }
+        ul{
+            li::before{
+                margin-left: 0;
+                margin-right: -1em;
+            }
+            li{
+                font-size:19px;
+            }
+        }
+
+        .descr{
+            h4{
+                font-size: 29px;
+                &.show-text{
+                    font-size: 20px;
+                }
+            }
+            .vector-image{
+                right: auto;
+                left: 10px;
+
+            }
+            .vector-2{
+                right: auto;
+                left: -25px;
+            }
+        }
+
+        
+    }
+
+    .course-content{
+        float: none !important;
+        .panda{
+            position: absolute;
+            top: 50px;
+            right: auto;
+            left: 80px;
+            width: 280px;
+            height: 140px;
+            img{width:100%; height: 100%;}
+        }
+        .unit{
+            
+            //head-topic is written above to be public
+            .lectures{
+                padding: 50px 80px 30px;
+                .topic{
+                    .topic-image{margin-bottom: 20px;}
+                    .topic-details{
+                        width:100%;
+                        margin-bottom: 30px;
+                        .row>div{padding-right: 20px; padding-left: 0;}
+                    }
+                    
+                }
+            }
+        }
+    }
+
+    .faq{
+        .panda{
+            right: auto;
+            left: 40px;
+        }
+        
+        .head-topic{
+            i{
+                top:30px;
+                right: auto;
+                left: 40px;
+            }
+        }
+    }
+}
+
+.listen{
+    right: auto;
+    left: 20px;
+    i{
+        &.fa-phone{right: -80px;}
+        &.fa-comments{right: -50px;}
+    }
+}
+
+
+// --------------------- EXAM --------------------- //
+
+.exam{
+    img.cloud{@include header-cloud-rtl;}
+    .layer-cloud{@include layer-cloud-rtl;}
+}
+
+
+
+// --------------------- OUR CLIENTS --------------------- //
+
+.customers{
+    img.cloud{@include header-cloud-rtl;}
+    .layer-cloud{@include layer-cloud-rtl;}
+    @media #{$maxMedium}{
+        .row>div{float: none !important;}
+    }
+}
+
+
+// --------------------- MEDIA --------------------- //
+
+//the rest of its style is already in ABOUT US section
+.our-media.media-page{
+    img.cloud{@include header-cloud-rtl;}
+    .layer-cloud{@include layer-cloud-rtl;}
+}
+
+
+
+// --------------------- BLOG --------------------- //
+
+.blogs{
+    img.cloud{@include header-cloud-rtl;}
+    .layer-cloud{@include layer-cloud-rtl;}
+    .left{
+        img.one{
+            left: 25px;
+        }
+    }
+    .content h6{
+        font-size: 19px;
+         i{
+        margin-right: 0;
+        margin-left: 5px;
+    }
+    }
+}
+
+
+// --------------------- BLOG DETAILS --------------------- //
+
+.blog-details{
+    img.cloud{@include header-cloud-rtl;}
+    .layer-cloud{@include layer-cloud-rtl;}
+    padding-top: 95px;
+
+    .row.text{
+        @include container-mixin;
+        width: 100%;
+        h3.main-heading{
+            margin-right: 15px;
+            font-size: 25px;
+        }
+        h6.main-heading{
+            font-size: 18px;
+            margin-right: 15px;
+        }
+        @media #{$maxSmall} {
+            padding-top: 100px;
+            h3.main-heading{font-size: 28px;}
+            h6.main-heading{font-size: 21px;}
+        }
+    }
+    .row.main-row{
+        >div{
+            h6{
+                font-size: 28px;
+                i{margin-left: 10px;}
+            }
+            img.main{
+                width: 100%;
+                height: 580px;
+                position: relative;
+            }
+
+            i#share{
+                right: auto;
+                left: 70px;
+            }
+            .other-blogs{
+                >.row{
+                    >div{
+                        .content{
+                            h6{font-size: 16px;}
+                            h5{font-size: 19px;}
+                            p{font-size: 20px;}
+                        }
+                    }
+                    
+                }
+            }
+        }
+        @media #{$maxSmall} {
+            padding-top: 0px;
+        }
+    }
+    
+}
+
+.blog-more-details{
+    .parag{
+        p{font-size: 20px;}
+    }
+    .row {
+        width: 100%;
+        >div{
+            p{font-size: 20px;}
+        }
+    }
+}
+
+.comments{
+    h3{font-size: 33px;}
+    .comment{
+        h3{font-size: 25px;}
+        p{font-size: 22px;}
+    }
+    form{
+        h3{font-size : 28px;}
+        input,
+        textarea
+        {font-size: 20px;}
+    }
+}
+
+
+
+
+
+// --------------------- CONTACT --------------------- //
+
+.contact{
+    img.cloud{@include header-cloud-rtl;}
+    .layer-cloud{@include layer-cloud-rtl;}
+
+    .robot{left: auto;
+        right: 65%;
+        transform: rotateY(180deg);
+    }
+    .color-background{
+        margin: 0 0 0 13%;
+        .contact-details{
+            h3{font-size: 32px;}
+            p{font-size: 20px;}
+            .row{
+                >div:first-child{text-align: right;}
+                h6{font-size: 22px;}
+            }
+        }
+    }
+}
+
+.contact-form{
+    form{
+        h3{font-size: 30px;}
+        input,
+        textarea
+        {font-size: 22px;}
+    }
+}
+
+
+
+
+
+// --------------------- PROFILE --------------------- //
+
+.account{
+    img.cloud{@include header-cloud-rtl;}
+    .layer-cloud{@include layer-cloud-rtl;}
+
+    >.row>div{
+        .cont{
+            .vector-image{
+                right: auto;
+                left: 40px;
+            }
+            h3{
+                text-align: right;
+                margin-left: 0;
+                margin-right: 30px;
+            }
+            
+            hr{
+                margin-left: 0;
+                margin-right: 10px;
+            }
+        }
+        .cont.content{
+            margin-left: 0;
+            margin-right: 30px;
+            @media #{$maxMedium} {
+                margin-right: 0;
+            }
+        }
+    }
+
+    .select{
+        h4{font-size: 27px;}
+    }
+    .courses{
+        display: none;
+        padding: 0px 20px 20px;
+
+        >.row{
+            margin-bottom: 10px;
+            h4{font-size: 25px;}
+            h5{font-size: 20px;}
+        }
+    }
+}
+
+
+
+
+
+// --------------------- LOGIN & REGISTER --------------------- //
+.register-form,
+.login-form{
+    background: url('../images/A-rtl.png') center no-repeat;
+    background-size: cover;
+    form{
+        h5{
+            a{
+                margin: 0 10px;
+            }
+        }
+    }
+}

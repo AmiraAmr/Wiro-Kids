@@ -1,0 +1,32 @@
+.burst {
+    background: #FF6565;
+    width: $burst-dimensions;
+    height: $burst-dimensions;
+    position: relative;
+    text-align: center;
+    }
+    .burst:before,
+    .burst:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: $burst-dimensions;
+    width: $burst-dimensions;
+    background: #FF6565;
+    }
+    .burst:before {
+    transform: rotate(30deg);
+    }
+    .burst:after {
+    transform: rotate(60deg);
+    }
+
+    .burst i{
+    position: absolute;
+    font-size: 40px;
+    color: #FFF;
+    z-index: 1;
+    top: 16px;
+    right: 20px;
+    }

@@ -1,0 +1,6 @@
+@mixin layer-cloud-rtl {
+    @include header-cloud-rtl;
+    background: url('../images/Group\ 1.png') center no-repeat;
+    background-size: cover;
+    z-index: 99;
+}

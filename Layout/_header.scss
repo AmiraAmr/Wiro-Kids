@@ -1,0 +1,69 @@
+
+@import '../helpers/_backgroundLayerMixin';
+
+
+header.header{
+    color: #FFF;
+    height: 700px;
+    position: relative;
+    overflow: hidden;
+    .carousel{
+        height: 100%;
+        .carousel-inner{
+            height: 100%;
+            .item{
+                height: 100%;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+
+    .layer{
+        z-index: 9;
+        @include backgroundLayer (rgba(0, 0, 0, 0.4));
+
+        h2,
+        .heading h2 {
+            font-size: 32px;
+            text-align: left;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .heading{
+            width: 50%;
+            p{font-size: 25px;margin-bottom: 25px;}
+
+           
+        }  
+
+    }
+    
+    @media #{$maxMedium} {
+        height: 900px;
+        .layer {
+            padding: 0 50px;
+            padding-top: 30%;
+        }
+        
+        .heading{
+            width: auto;
+            h2,
+            .heading h2
+            {font-size: 45px;}
+            p{font-size: 31px;}
+        }   
+    }
+    @media  #{$maxSmall} {
+        height: 900px;
+        .layer{
+            .heading{
+                width: 70%;
+            }
+        }
+    }
+        
+}
